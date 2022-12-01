@@ -33,7 +33,7 @@ The primary distinction between the two is that regressions imply a cause and ef
 
 The correlation coefficient most similar to Spearman's is the 'Pearson's Correlation Coefficient'. They both test the strength of relationships between variables. But how so? Well, the two key distinctions are as follows:
 
-1.  Spearman's can measure monotonic relationships between two variables whereas Pearson's is restricted to linear distributions only. A monotonic distribution is where the two variables are correlated in some way, but do not necessarily always change proportionally to one another. We can visualise this in the stormy graph below: ![](/data_visualisation/lightning/monotonic_lightning.png) This striking figure (pun intended) illustrates a hypothetical relationship between the number of lightning strikes a place experiences and the average temperature. We can interpret that the relationship is certainly positive, but not necessarily linear. We can see that at some points, the change of one variable is not proportional to the change of the other. The benefit of Spearman's is that it can work with monotonic relationships like this one, something that other correlation coefficients, such as Pearson's, cannot.
+1.  Spearman's can measure monotonic relationships between two variables whereas Pearson's is restricted to linear distributions only. A monotonic distribution is where the two variables are correlated in some way, but do not necessarily always change proportionally to one another. We can visualise this in the stormy graph below: ![](monotonic_lightning.png) This striking figure (pun intended) illustrates a hypothetical relationship between the number of lightning strikes a place experiences and the average temperature. We can interpret that the relationship is certainly positive, but not necessarily linear. We can see that at some points, the change of one variable is not proportional to the change of the other. The benefit of Spearman's is that it can work with monotonic relationships like this one, something that other correlation coefficients, such as Pearson's, cannot.
 
 2.  Spearman's assigns ranks to the raw data which makes it non-parametric. This means that ordinal data can be utilised when studying relationships, a trait that its non-parametric equivalent Pearson's is lacking. This means that, as well as numerical data, non-continuous data with a clear hierarchy can be analysed by converting it into a numerical a rank. We call this type of data **ordinal data**. An example might be grades from a test (A, B, C etc.). We could assign the rank 1 to A, 2 to B and 3 to C.
 
@@ -50,7 +50,7 @@ So, lets quickly summarise the key similarities and differences between what Spe
 
 Here's the equation for Spearman's:
 
-![The Spearman's equation. Source: <https://www.dataanalytics.org.uk/spearman-rank-correlation-in-excel/>](/external_content/spearmans_equation/spearmans_equation.png)
+![The Spearman's equation. Source: <https://www.dataanalytics.org.uk/spearman-rank-correlation-in-excel/>](spearmans_equation.png)
 
 #### Spearheading an attempt to understand the formula:
 
@@ -91,7 +91,7 @@ forest <- read.csv("data/forest.csv")
 
 We've touched on lightning already, but now we'll move onto a natural hazard that it can create:
 
-![](/external_content/wildfire/wild_fire.png) Source: [Matthew Abbott  ](https://www.nytimes.com/2020/01/10/world/australia/australia-wildfires-photos.html)
+![](wild_fire.png) Source: [Matthew Abbott  ](https://www.nytimes.com/2020/01/10/world/australia/australia-wildfires-photos.html)
 
 The data, sourced from [Worldometer](https://www.worldometers.info/population/countries-in-europe-by-population/) and [Global Forest Watch](https://www.globalforestwatch.org/dashboards/global/?category=fires&dashboardPrompts=eyJzaG93UHJvbXB0cyI6dHJ1ZSwicHJvbXB0c1ZpZXdlZCI6WyJzaGFyZVdpZGdldCJdLCJzZXR0aW5ncyI6eyJzaG93UHJvbXB0cyI6dHJ1ZSwicHJvbXB0c1ZpZXdlZCI6W10sInNldHRpbmdzIjp7Im9wZW4iOmZhbHNlLCJzdGVwSW5kZXgiOjAsInN0ZXBzS2V5IjoiIn0sIm9wZW4iOnRydWUsInN0ZXBJbmRleCI6MCwic3RlcHNLZXkiOiJzaGFyZVdpZGdldCJ9LCJvcGVuIjp0cnVlLCJzdGVwc0tleSI6ImRvd25sb2FkRGFzaGJvYXJkU3RhdHMifQ%3D%3D&gfwfires=true&location=WyJnbG9iYWwiXQ%3D%3D&map=eyJjZW50ZXIiOnsibGF0IjoxNi45MDkyNDU0OTkzMjczNzMsImxuZyI6LTUyLjU3NzE4NDY5NDk1OTIzNn0sImRhdGFzZXRzIjpbeyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJib3VuZGFyeSI6dHJ1ZSwib3BhY2l0eSI6MSwidmlzaWJpbGl0eSI6dHJ1ZX0seyJkYXRhc2V0IjoidHJlZS1jb3Zlci1sb3NzLWZpcmVzIiwibGF5ZXJzIjpbInRyZWUtY292ZXItbG9zcy1maXJlcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlLCJ0aW1lbGluZVBhcmFtcyI6eyJzdGFydERhdGUiOiIyMDAxLTAxLTAxIiwiZW5kRGF0ZSI6IjIwMjEtMTItMzEiLCJ0cmltRW5kRGF0ZSI6IjIwMjEtMTItMzEifSwicGFyYW1zIjp7InRocmVzaG9sZCI6MzAsInZpc2liaWxpdHkiOnRydWUsImFkbV9sZXZlbCI6ImFkbTAifX1dfQ%3D%3D&showMap=true&treeLossFires=eyJwYWdlIjowfQ%3D%3D) contains the 20 countries with the highest forest fire losses between 2001 and 2021. The countries' total forest loss (kha) and total size (km $^2$ ) are included. Let's check out the distribution between forest fire losses and country size.
 
@@ -104,7 +104,7 @@ forest %>%
   geom_smooth(se = F)  # Plotting the line of best fit
 ```
 
-![](/data_visualisation/initial_distribution/first_data_distribution.png)
+![](first_data_distribution.png)
 
 It's a little tricky to interpret our data here. It seems that overall, the relationship between forest fire loss and country area is positive, but the distribution of the data certainly isn't linear. Sometimes we can log-transform our data to make it fit a linear distribution but this still doesn't help us, check out [this tutorial](https://ourcodingclub.github.io/tutorials/data-scaling/) for more information on this topic. You can see for yourself by changing variables to `log(area)` and/or `log(forest_loss)`. This rules out the use of Pearson's to test the variables correlation; our relationship appears to be monotonic like the distribution we saw earlier! So, let's dig deeper into the strength of the relationship using Spearman's.
 
@@ -198,11 +198,11 @@ The output is our $r_s$ value: **0.735**. Time to make sense of it!
 
 Now remember, the output should fall between -1 and +1:
 
-![Correlation scale bar](/external_content/correlation_scale/correlation_scale.png)
+![Correlation scale bar](correlation_scale.png)
 
 Our output falls on the positive end of the spectrum, suggesting a positive relationship between our two variables. But to test whether the value is statistically significant i.e. not down to chance, we must refer to a table to critical values:
 
-![](/external_content/critical_values/critical_values_table.png)
+![](critical_values_table.png)
 
 The confidence we have in our $r_s$ value increases with sample size. We have a sample size of 20 (countries). When we look to our table, we can see that, Where n = 20, the critical value for the 0.01 confidence interval is met (0.57). Similar to other frequentist analyses, we can use this threshold to conclude that the probability of our results being down to chance are \< 1%.
 
