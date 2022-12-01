@@ -77,7 +77,7 @@ Its important that we understand the assumptions and requirements of Spearman's 
 
 It's almost time to have a go at our own Spearman's rank. But first lets take a look at the data we're going to use:
 
-Clone and download this repository! Then, in your R script, set the working directory to the location where you save the repository.
+Clone and download [this repository!](https://github.com/EdDataScienceEES/tutorial-mattprill) Then, in your R script, set the working directory to the location where you save the repository.
 
 ``` r
 setwd("PATH/TO/FOLDER")
