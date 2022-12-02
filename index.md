@@ -156,7 +156,7 @@ Next we create a column for the differences between the ranks called 'Difference
 ranked_data['Differences'] = ranked_data['Area_Rank'] - ranked_data['Forest_Loss_Rank']
 ```
 
-We want to find the sum of these values which we can calculate with using similar syntax:
+We want to find the squares of these values which we can calculate with using similar syntax:
 
 ``` r
 # Add square of differences column
